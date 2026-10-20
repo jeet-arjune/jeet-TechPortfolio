@@ -903,33 +903,34 @@
         }
         window.scrollTo(0, 0);
 
-        // Project Carousel Auto Scroll
+        // Project Carousel Auto Scroll optimized for Safari & Chrome
         const projectContainer = document.getElementById('projectScrollContainer');
         let isProjectHovered = false;
-        let projSpeed = 0.6; // Slightly smoother speed
+        let projSpeed = 0.5;
         let projDirection = 1;
 
         if (projectContainer) {
-            projectContainer.addEventListener('mouseenter', () => {
-                isProjectHovered = true;
-            });
-            projectContainer.addEventListener('mouseleave', () => {
-                isProjectHovered = false;
-            });
-            projectContainer.addEventListener('touchstart', () => {
-                isProjectHovered = true;
-            });
+            // Mouse events
+            projectContainer.addEventListener('mouseenter', () => { isProjectHovered = true; });
+            projectContainer.addEventListener('mouseleave', () => { isProjectHovered = false; });
+            
+            // Touch events for mobile/Safari
+            projectContainer.addEventListener('touchstart', () => { isProjectHovered = true; }, { passive: true });
             projectContainer.addEventListener('touchend', () => {
-                // Short delay to resume scrolling after touch
-                setTimeout(() => {
-                    isProjectHovered = false;
-                }, 1000);
-            });
+                // Resume auto-scrolling shortly after touch ends on Safari
+                setTimeout(() => { isProjectHovered = false; }, 1200);
+            }, { passive: true });
+
+            // Safety fallback: clear hover state if user scrolls manually
+            projectContainer.addEventListener('wheel', () => {
+                isProjectHovered = true;
+                clearTimeout(window.scrollTimeout);
+                window.scrollTimeout = setTimeout(() => { isProjectHovered = false; }, 2000);
+            }, { passive: true });
 
             function autoScrollProjects() {
                 if (!isProjectHovered) {
-                    // Check if reached bottom or top to reverse direction
-                    if (projectContainer.scrollTop + projectContainer.clientHeight >= projectContainer.scrollHeight - 4) {
+                    if (projectContainer.scrollTop + projectContainer.clientHeight >= projectContainer.scrollHeight - 3) {
                         projDirection = -1;
                     } else if (projectContainer.scrollTop <= 0) {
                         projDirection = 1;
@@ -939,7 +940,6 @@
                 requestAnimationFrame(autoScrollProjects);
             }
             
-            // Start the auto scroll loop
             requestAnimationFrame(autoScrollProjects);
         }
 
