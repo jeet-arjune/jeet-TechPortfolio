@@ -79,6 +79,9 @@
         section {
             scroll-margin-top: 40px;
         }
+        iframe {
+            clip-path: inset(0 0 65px 0);
+        }
     </style>
 </head>
 
@@ -132,6 +135,15 @@
             <div class="px-3 py-1 rounded-full bg-white/80 backdrop-blur-md border border-zinc-200/80 shadow-xs text-[11px] font-mono-code text-zinc-700 font-medium">
                 AI &amp; Robotics
             </div>
+        </div>
+        
+        <!-- Ultra-small "Play with me" Badge with an actual image in the circle -->
+        <div class="absolute bottom-[64px] right-4 z-20 flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#18181b] text-white shadow-sm pointer-events-none">
+            <!-- Circle Container with Image -->
+            <div class="w-4 h-4 rounded-full overflow-hidden shrink-0 flex items-center justify-center bg-zinc-800">
+                <img src="your-image.png" alt="Icon" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=100'" />
+            </div>
+            <span class="text-[7px] font-mono-code font-medium tracking-wide pr-0.5 leading-none pt-0.5">Play with me</span>
         </div>
 
         <!-- LEFT SIDE: SCROLLING LIVE PROJECTS FEED -->
