@@ -895,7 +895,7 @@
         </div>
     </section>
 
-    <!-- AUTO-SCROLL & REFRESH CONTROLLER SCRIPT -->
+   <!-- AUTO-SCROLL & REFRESH CONTROLLER SCRIPT -->
     <script>
         // Force scroll to top on page refresh or reload
         if (history.scrollRestoration) {
@@ -906,7 +906,7 @@
         // Project Carousel Auto Scroll
         const projectContainer = document.getElementById('projectScrollContainer');
         let isProjectHovered = false;
-        let projSpeed = 0.5;
+        let projSpeed = 0.6; // Slightly smoother speed
         let projDirection = 1;
 
         if (projectContainer) {
@@ -920,12 +920,16 @@
                 isProjectHovered = true;
             });
             projectContainer.addEventListener('touchend', () => {
-                isProjectHovered = false;
+                // Short delay to resume scrolling after touch
+                setTimeout(() => {
+                    isProjectHovered = false;
+                }, 1000);
             });
 
             function autoScrollProjects() {
                 if (!isProjectHovered) {
-                    if (projectContainer.scrollTop + projectContainer.clientHeight >= projectContainer.scrollHeight - 2) {
+                    // Check if reached bottom or top to reverse direction
+                    if (projectContainer.scrollTop + projectContainer.clientHeight >= projectContainer.scrollHeight - 4) {
                         projDirection = -1;
                     } else if (projectContainer.scrollTop <= 0) {
                         projDirection = 1;
@@ -934,6 +938,8 @@
                 }
                 requestAnimationFrame(autoScrollProjects);
             }
+            
+            // Start the auto scroll loop
             requestAnimationFrame(autoScrollProjects);
         }
 
@@ -959,7 +965,7 @@
             modalBox.classList.add('scale-95');
         }
     </script>
-
+    
 </body>
 
 </html>
