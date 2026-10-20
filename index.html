@@ -787,7 +787,11 @@
         <div class="max-w-6xl mx-auto bg-white/80 backdrop-blur-md border border-zinc-200/80 rounded-3xl p-6 md:p-8 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-8 relative overflow-hidden">
 
             <!-- LEFT: FORM (7 COLS) -->
-            <form action="https://formsubmit.co/arjunejeet@gmail.com" method="POST" class="lg:col-span-7 space-y-4 z-10">
+           <form action="https://formsubmit.co/arjunejeet@gmail.com" method="POST" class="lg:col-span-7 space-y-4 z-10">
+    
+                <!-- Redirects user back to your specific portfolio URL after submission -->
+                <input type="hidden" name="_next" value="https://jeet-arjune.github.io/jeet-TechPortfolio/">
+            
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                         <label class="block text-[11px] font-mono-code text-zinc-500 uppercase tracking-wider mb-1">First Name</label>
@@ -798,24 +802,23 @@
                         <input type="text" name="last_name" class="w-full bg-zinc-50/80 border border-zinc-200 rounded-xl px-3.5 py-2.5 text-xs md:text-sm text-zinc-900 focus:outline-none focus:border-cyan-600 transition-colors" />
                     </div>
                 </div>
-
+            
                 <div>
                     <label class="block text-[11px] font-mono-code text-zinc-500 uppercase tracking-wider mb-1">Email Address</label>
                     <input type="email" name="email" required placeholder="example@email.com" class="w-full bg-zinc-50/80 border border-zinc-200 rounded-xl px-3.5 py-2.5 text-xs md:text-sm text-zinc-900 focus:outline-none focus:border-cyan-600 transition-colors" />
                 </div>
-
+            
                 <div>
                     <label class="block text-[11px] font-mono-code text-zinc-500 uppercase tracking-wider mb-1">Phone Number</label>
                     <input type="tel" name="phone" required placeholder="+91 " class="w-full bg-zinc-50/80 border border-zinc-200 rounded-xl px-3.5 py-2.5 text-xs md:text-sm text-zinc-900 focus:outline-none focus:border-cyan-600 transition-colors " />
                 </div>
-
+            
                 <div>
                     <label class="block text-[11px] font-mono-code text-zinc-500 uppercase tracking-wider mb-1 ">Message</label>
-                    <textarea name="message " rows="3 " required placeholder="Type your message here... " class="w-full bg-zinc-50/80 border border-zinc-200 rounded-xl px-3.5 py-2.5 text-xs md:text-sm text-zinc-900 focus:outline-none focus:border-cyan-600
-                        transition-colors resize-none "></textarea>
+                    <textarea name="message" rows="3" required placeholder="Type your message here..." class="w-full bg-zinc-50/80 border border-zinc-200 rounded-xl px-3.5 py-2.5 text-xs md:text-sm text-zinc-900 focus:outline-none focus:border-cyan-600 transition-colors resize-none "></textarea>
                 </div>
-
-                <button type="submit " class="px-6 py-3 rounded-xl bg-cyan-700 hover:bg-cyan-800 text-white text-xs font-mono-code font-semibold tracking-wider uppercase shadow-md transition-all duration-300 ">
+            
+                <button type="submit" class="px-6 py-3 rounded-xl bg-cyan-700 hover:bg-cyan-800 text-white text-xs font-mono-code font-semibold tracking-wider uppercase shadow-md transition-all duration-300 ">
                     Submit Message &rarr;
                 </button>
             </form>
