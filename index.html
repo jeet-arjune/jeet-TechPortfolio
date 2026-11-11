@@ -10,7 +10,6 @@
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
         body {
             background-color: #f7f6f2;
-            /* Soft white + cream background */
             color: #18181b;
             font-family: 'Plus Jakarta Sans', sans-serif;
         }
@@ -22,7 +21,6 @@
         .font-mono-code {
             font-family: 'JetBrains Mono', monospace;
         }
-        /* Custom smooth scrollbar styling */
         
         .custom-scroll::-webkit-scrollbar {
             width: 4px;
@@ -41,7 +39,6 @@
         .custom-scroll::-webkit-scrollbar-thumb:hover {
             background: rgba(0, 0, 0, 0.3);
         }
-        /* Full screen 3D Spline container */
         
         .spline-full-container {
             position: absolute;
@@ -59,7 +56,6 @@
             transform: scale(0.65) translateX(25%);
             transform-origin: center center;
         }
-        /* Floating animation for decorative lower right object */
         
         @keyframes float-slow {
             0%,
@@ -74,7 +70,6 @@
         .animate-float-slow {
             animation: float-slow 6s ease-in-out infinite;
         }
-        /* Ensures anchor links jump smoothly with perfect padding at the top */
         
         section {
             scroll-margin-top: 40px;
@@ -127,19 +122,16 @@
 
         <!-- LOWER RIGHT COLORED DECORATIVE OBJECT NEAR ROBOT -->
         <div class="absolute bottom-16 right-20 md:right-36 z-10 pointer-events-none animate-float-slow hidden sm:flex items-center gap-3">
-            <!-- Glowing Soft Teal & Cyan Sphere -->
             <div class="w-14 h-14 md:w-20 md:h-20 rounded-full bg-gradient-to-tr from-cyan-400 via-teal-300 to-emerald-200 blur-[1px] shadow-lg shadow-cyan-500/20 border border-white/60 relative overflow-hidden flex items-center justify-center">
                 <div class="w-6 h-6 rounded-full bg-white/40 blur-xs absolute top-2 left-3"></div>
             </div>
-            <!-- Accent Pill Tag -->
             <div class="px-3 py-1 rounded-full bg-white/80 backdrop-blur-md border border-zinc-200/80 shadow-xs text-[11px] font-mono-code text-zinc-700 font-medium">
                 AI &amp; Robotics
             </div>
         </div>
         
-        <!-- Ultra-small "Play with me" Badge with an actual image in the circle -->
+        <!-- Ultra-small "Play with me" Badge -->
         <div class="absolute bottom-[64px] right-4 z-20 flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#18181b] text-white shadow-sm pointer-events-none">
-            <!-- Circle Container with Image -->
             <div class="w-4 h-4 rounded-full overflow-hidden shrink-0 flex items-center justify-center bg-zinc-800">
                 <img src="your-image.png" alt="Icon" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=100'" />
             </div>
@@ -165,13 +157,53 @@
 
                 <div class="flex flex-col gap-6 py-2">
 
-                    <!-- PROJECT 1: NIRVANA -->
+                    <!-- PROJECT 1: AEROMIND MAINTENANCE SUITE (NEW) -->
                     <div class="bg-white/80 backdrop-blur-md border border-zinc-200/80 rounded-2xl p-5 shadow-sm hover:shadow-md transition-all group cursor-pointer">
                         <div class="h-32 w-full rounded-xl overflow-hidden bg-zinc-900 mb-4 relative">
-                            <img src="Nirvana.png" alt="Nirvana — Eco-Recycling Platform" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90" onerror="this.src='https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?q=80&w=600'"
-                            />
+                            <img src="aeromind.png" alt="AeroMind Maintenance Suite" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90" onerror="this.src='https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=600'" />
+                            <span class="absolute top-3 right-3 bg-cyan-600/90 text-white text-[10px] font-semibold px-2 py-0.5 rounded-full backdrop-blur-md flex items-center gap-1">
+                                <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span> Live Demo · Prototype
+                            </span>
+                        </div>
+                        <h3 class="serif-title text-lg font-semibold text-zinc-900 group-hover:text-cyan-700 transition-colors">AeroMind Maintenance Suite</h3>
+                        <p class="text-xs text-zinc-500 mt-1 leading-relaxed">A predictive maintenance prototype that helps teams review simulated engine health and RUL predictions, then manage technician assignments, work orders, and maintenance reports.</p>
+                        <div class="flex items-center justify-between mt-4 pt-3 border-t border-zinc-100">
+                            <div class="flex flex-wrap gap-1 text-[10px] font-mono-code text-zinc-600">
+                                <span class="px-2 py-0.5 rounded bg-zinc-100">#React</span>
+                                <span class="px-2 py-0.5 rounded bg-zinc-100">#FastAPI</span>
+                                <span class="px-2 py-0.5 rounded bg-zinc-100">#Python</span>
+                                <span class="px-2 py-0.5 rounded bg-zinc-100">#Three.js</span>
+                            </div>
+                            <a href="https://aeromind-maintenance-suite.onrender.com/" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-cyan-700 hover:underline flex items-center gap-1">Live Demo &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- PROJECT 2: SAMAJ HEARING SUPPORT PORTAL (NEW) -->
+                    <div class="bg-white/80 backdrop-blur-md border border-zinc-200/80 rounded-2xl p-5 shadow-sm hover:shadow-md transition-all group cursor-pointer">
+                        <div class="h-32 w-full rounded-xl overflow-hidden bg-zinc-900 mb-4 relative">
+                            <img src="prlogo.png" alt="Samaj - Hearing Support Portal" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90" onerror="this.src='https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=600'" />
                             <span class="absolute top-3 right-3 bg-emerald-500/90 text-white text-[10px] font-semibold px-2 py-0.5 rounded-full backdrop-blur-md flex items-center gap-1">
-                <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span> Live
+                                <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span> Live Website
+                            </span>
+                        </div>
+                        <h3 class="serif-title text-lg font-semibold text-zinc-900 group-hover:text-cyan-700 transition-colors">Samaj — Hearing Support Portal</h3>
+                        <p class="text-xs text-zinc-500 mt-1 leading-relaxed">A community support & accessibility portal dedicated to empowering deaf and hard-of-hearing families with resources on government schemes, medical treatments, and education.</p>
+                        <div class="flex items-center justify-between mt-4 pt-3 border-t border-zinc-100">
+                            <div class="flex flex-wrap gap-1 text-[10px] font-mono-code text-zinc-600">
+                                <span class="px-2 py-0.5 rounded bg-zinc-100">#HTML/CSS</span>
+                                <span class="px-2 py-0.5 rounded bg-zinc-100">#JavaScript</span>
+                                <span class="px-2 py-0.5 rounded bg-zinc-100">#Multi-language</span>
+                            </div>
+                            <a href="https://jeet-arjune.github.io/samaj-hearing-support-portal/" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-cyan-700 hover:underline flex items-center gap-1">Live Site &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- PROJECT 3: NIRVANA -->
+                    <div class="bg-white/80 backdrop-blur-md border border-zinc-200/80 rounded-2xl p-5 shadow-sm hover:shadow-md transition-all group cursor-pointer">
+                        <div class="h-32 w-full rounded-xl overflow-hidden bg-zinc-900 mb-4 relative">
+                            <img src="Nirvana.png" alt="Nirvana — Eco-Recycling Platform" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90" onerror="this.src='https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?q=80&w=600'" />
+                            <span class="absolute top-3 right-3 bg-emerald-500/90 text-white text-[10px] font-semibold px-2 py-0.5 rounded-full backdrop-blur-md flex items-center gap-1">
+                                <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span> Live
                             </span>
                         </div>
                         <h3 class="serif-title text-lg font-semibold text-zinc-900 group-hover:text-cyan-700 transition-colors">Nirvana — Eco-Recycling Platform</h3>
@@ -186,12 +218,12 @@
                         </div>
                     </div>
 
-                    <!-- PROJECT 2: QUICKCOST AI -->
+                    <!-- PROJECT 4: QUICKCOST AI -->
                     <div class="bg-white/80 backdrop-blur-md border border-zinc-200/80 rounded-2xl p-5 shadow-sm hover:shadow-md transition-all group cursor-pointer">
                         <div class="h-32 w-full rounded-xl overflow-hidden bg-zinc-900 mb-4 relative">
                             <img src="QuickCost.png" alt="QuickCost AI" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90" onerror="this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=600'" />
                             <span class="absolute top-3 right-3 bg-amber-500/90 text-white text-[10px] font-semibold px-2 py-0.5 rounded-full backdrop-blur-md flex items-center gap-1">
-                <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span> Prototype
+                                <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span> Prototype
                             </span>
                         </div>
                         <h3 class="serif-title text-lg font-semibold text-zinc-900 group-hover:text-cyan-700 transition-colors">QuickCost AI — Quick-Commerce Optimizer</h3>
@@ -206,13 +238,12 @@
                         </div>
                     </div>
 
-                    <!-- PROJECT 3: KHARCHA -->
+                    <!-- PROJECT 5: KHARCHA -->
                     <div class="bg-white/80 backdrop-blur-md border border-zinc-200/80 rounded-2xl p-5 shadow-sm hover:shadow-md transition-all group cursor-pointer">
                         <div class="h-32 w-full rounded-xl overflow-hidden bg-zinc-900 mb-4 relative">
-                            <img src="Kharcha.png" alt="Kharcha — Expense Management System" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90" onerror="this.src='https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=600'"
-                            />
+                            <img src="Kharcha.png" alt="Kharcha — Expense Management System" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90" onerror="this.src='https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=600'" />
                             <span class="absolute top-3 right-3 bg-emerald-500/90 text-white text-[10px] font-semibold px-2 py-0.5 rounded-full backdrop-blur-md flex items-center gap-1">
-                <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span> Live
+                                <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span> Live
                             </span>
                         </div>
                         <h3 class="serif-title text-lg font-semibold text-zinc-900 group-hover:text-cyan-700 transition-colors">Kharcha — Personal Finance Tracker</h3>
@@ -227,13 +258,12 @@
                         </div>
                     </div>
 
-                    <!-- PROJECT 4: LIFELINK -->
+                    <!-- PROJECT 6: LIFELINK -->
                     <div class="bg-white/80 backdrop-blur-md border border-zinc-200/80 rounded-2xl p-5 shadow-sm hover:shadow-md transition-all group cursor-pointer">
                         <div class="h-32 w-full rounded-xl overflow-hidden bg-zinc-900 mb-4 relative">
-                            <img src="lifelink.png" alt="LifeLink — Blood Donor Directory" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90" onerror="this.src='https://images.unsplash.com/photo-1615461066841-6116e61058f4?q=80&w=600'"
-                            />
+                            <img src="lifelink.png" alt="LifeLink — Blood Donor Directory" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90" onerror="this.src='https://images.unsplash.com/photo-1615461066841-6116e61058f4?q=80&w=600'" />
                             <span class="absolute top-3 right-3 bg-emerald-500/90 text-white text-[10px] font-semibold px-2 py-0.5 rounded-full backdrop-blur-md flex items-center gap-1">
-                <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span> Live
+                                <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span> Live
                             </span>
                         </div>
                         <h3 class="serif-title text-lg font-semibold text-zinc-900 group-hover:text-cyan-700 transition-colors">LifeLink — Blood Donor Directory</h3>
@@ -259,10 +289,9 @@
                 </a>
                 <div class="flex flex-wrap gap-2 text-[11px] font-mono-code text-zinc-600">
                     <span class="px-3 py-1 rounded-full bg-white border border-zinc-200 shadow-2xs">Python</span>
+                    <span class="px-3 py-1 rounded-full bg-white border border-zinc-200 shadow-2xs">React</span>
                     <span class="px-3 py-1 rounded-full bg-white border border-zinc-200 shadow-2xs">Node.js</span>
-                    <span class="px-3 py-1 rounded-full bg-white border border-zinc-200 shadow-2xs">Express.js</span>
-                    <span class="px-3 py-1 rounded-full bg-white border border-zinc-200 shadow-2xs">PHP</span>
-                    <span class="px-3 py-1 rounded-full bg-white border border-zinc-200 shadow-2xs">MySQL</span>
+                    <span class="px-3 py-1 rounded-full bg-white border border-zinc-200 shadow-2xs">TypeScript</span>
                     <span class="px-3 py-1 rounded-full bg-white border border-zinc-200 shadow-2xs">MongoDB</span>
                 </div>
             </div>
@@ -276,10 +305,9 @@
 
     </section>
 
-    <!-- ================= SECTION 02: CONCEPT 1 CREDENTIALS & ROLES ================= -->
+    <!-- ================= SECTION 02: CREDENTIALS & ROLES ================= -->
     <section id="credentials" class="w-full bg-[#f7f6f2] px-8 md:px-16 lg:px-24 pt-10 pb-20 border-t border-zinc-200/80 relative z-30">
 
-        <!-- SECTION HEADER -->
         <div class="max-w-6xl mx-auto mb-12 space-y-3">
             <div class="flex items-center gap-2 text-xs font-mono-code text-cyan-700 font-semibold uppercase tracking-widest">
                 <span class="w-2 h-2 rounded-full bg-cyan-500"></span> 02 / Credentials &amp; Experience
@@ -290,7 +318,6 @@
             </p>
         </div>
 
-        <!-- CONCEPT 1: 2-COLUMN GRID (SEQUENCED) -->
         <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
 
             <!-- CARD 1: TECH FUSION PROJECT EXPO RUNNER UP -->
@@ -299,13 +326,12 @@
                     <div class="flex items-center justify-between mb-4">
                         <span class="text-xs font-mono-code text-zinc-400 font-semibold">01.</span>
                         <span class="px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200/60 text-emerald-800 text-[11px] font-mono-code font-medium">
-              ROLE: FULL-STACK ARCHITECT &amp; LEAD DEVELOPER
-            </span>
+                            ROLE: FULL-STACK ARCHITECT &amp; LEAD DEVELOPER
+                        </span>
                     </div>
 
                     <div class="h-44 w-full rounded-xl overflow-hidden bg-zinc-900 mb-6 relative group/img cursor-pointer" onclick="openCertModal('techfusion-cert.png', 'TECH FUSION 2026 — Project Expo Runner Up', 'PRMCEAM Badnera • Secured Runner Up • Sep 28-29, 2026')">
-                        <img src="techfusion-cert.png" alt="Tech Fusion Project Expo Certificate" class="w-full h-full object-cover opacity-90 group-hover/img:scale-105 transition-transform duration-500" onerror="this.src='https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=800'"
-                        />
+                        <img src="techfusion-cert.png" alt="Tech Fusion Project Expo Certificate" class="w-full h-full object-cover opacity-90 group-hover/img:scale-105 transition-transform duration-500" onerror="this.src='https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=800'" />
                         <div class="absolute inset-0 bg-gradient-to-t from-zinc-900/60 via-transparent to-transparent opacity-0 group-hover/img:opacity-100 transition-opacity flex items-end p-4">
                             <span class="text-white text-xs font-mono-code font-medium flex items-center gap-1">Click to expand preview &nearr;</span>
                         </div>
@@ -349,13 +375,12 @@
                     <div class="flex items-center justify-between mb-4">
                         <span class="text-xs font-mono-code text-zinc-400 font-semibold">02.</span>
                         <span class="px-3 py-1 rounded-full bg-purple-50 border border-purple-200/60 text-purple-800 text-[11px] font-mono-code font-medium">
-              ROLE: ROBOTICS &amp; AI ENGINEER
-            </span>
+                            ROLE: ROBOTICS &amp; AI ENGINEER
+                        </span>
                     </div>
 
                     <div class="h-44 w-full rounded-xl overflow-hidden bg-zinc-900 mb-6 relative group/img cursor-pointer" onclick="openCertModal('roboai-cert.png', 'Robo-AI Industrial Training', 'My Equation • 45-Day Industrial Training Program • Jul 7 - Sep 30, 2026')">
-                        <img src="roboai-cert.png" alt="Robo-AI Certificate" class="w-full h-full object-cover opacity-90 group-hover/img:scale-105 transition-transform duration-500" onerror="this.src='https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=800'"
-                        />
+                        <img src="roboai-cert.png" alt="Robo-AI Certificate" class="w-full h-full object-cover opacity-90 group-hover/img:scale-105 transition-transform duration-500" onerror="this.src='https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=800'" />
                         <div class="absolute inset-0 bg-gradient-to-t from-zinc-900/60 via-transparent to-transparent opacity-0 group-hover/img:opacity-100 transition-opacity flex items-end p-4">
                             <span class="text-white text-xs font-mono-code font-medium flex items-center gap-1">Click to expand preview &nearr;</span>
                         </div>
@@ -399,13 +424,12 @@
                     <div class="flex items-center justify-between mb-4">
                         <span class="text-xs font-mono-code text-zinc-400 font-semibold">03.</span>
                         <span class="px-3 py-1 rounded-full bg-cyan-50 border border-cyan-200/60 text-cyan-800 text-[11px] font-mono-code font-medium">
-                                ROLE: ENTERPRISE SYSTEMS &amp; AI LEARNER
-                            </span>
+                            ROLE: ENTERPRISE SYSTEMS &amp; AI LEARNER
+                        </span>
                     </div>
 
                     <div class="h-44 w-full rounded-xl overflow-hidden bg-zinc-900 mb-6 relative group/img cursor-pointer" onclick="openCertModal('ibm-cert.png', 'IBM SkillsBuild — Advance Guided Learning', 'IBM SkillsBuild & Edunet • In-Person Workshop • Issued Aug 19, 2026 • ID: PLAN-0BE04B59E563')">
-                        <img src="ibm-cert.png" alt="IBM SkillsBuild Certificate" class="w-full h-full object-cover opacity-90 group-hover/img:scale-105 transition-transform duration-500" onerror="this.src='https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=800'"
-                        />
+                        <img src="ibm-cert.png" alt="IBM SkillsBuild Certificate" class="w-full h-full object-cover opacity-90 group-hover/img:scale-105 transition-transform duration-500" onerror="this.src='https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=800'" />
                         <div class="absolute inset-0 bg-gradient-to-t from-zinc-900/60 via-transparent to-transparent opacity-0 group-hover/img:opacity-100 transition-opacity flex items-end p-4">
                             <span class="text-white text-xs font-mono-code font-medium flex items-center gap-1">Click to expand preview &nearr;</span>
                         </div>
@@ -443,20 +467,18 @@
                 </div>
             </div>
 
-
             <!-- CARD 4: SALESFORCE ADMINISTRATOR -->
             <div class="bg-white/80 backdrop-blur-md border border-zinc-200/80 rounded-2xl p-6 md:p-8 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
                 <div>
                     <div class="flex items-center justify-between mb-4">
                         <span class="text-xs font-mono-code text-zinc-400 font-semibold">04.</span>
                         <span class="px-3 py-1 rounded-full bg-blue-50 border border-blue-200/60 text-blue-800 text-[11px] font-mono-code font-medium">
-              ROLE: CRM &amp; CLOUD ADMINISTRATOR
-            </span>
+                            ROLE: CRM &amp; CLOUD ADMINISTRATOR
+                        </span>
                     </div>
 
                     <div class="h-44 w-full rounded-xl overflow-hidden bg-zinc-900 mb-6 relative group/img cursor-pointer" onclick="openCertModal('salesforce-cert.png', 'Salesforce Administrator', 'Simplilearn SkillUp Certification • Issued Apr 2, 2026 • ID: 10041847')">
-                        <img src="salesforce-cert.png" alt="Salesforce Administrator Certificate" class="w-full h-full object-cover opacity-90 group-hover/img:scale-105 transition-transform duration-500" onerror="this.src='https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=800'"
-                        />
+                        <img src="salesforce-cert.png" alt="Salesforce Administrator Certificate" class="w-full h-full object-cover opacity-90 group-hover/img:scale-105 transition-transform duration-500" onerror="this.src='https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=800'" />
                         <div class="absolute inset-0 bg-gradient-to-t from-zinc-900/60 via-transparent to-transparent opacity-0 group-hover/img:opacity-100 transition-opacity flex items-end p-4">
                             <span class="text-white text-xs font-mono-code font-medium flex items-center gap-1">Click to expand preview &nearr;</span>
                         </div>
@@ -501,7 +523,6 @@
     <!-- ================= SECTION: TECH STACK, TOOLS & SKILLS ================= -->
     <section id="skills" class="w-full bg-[#f7f6f2] pt-10 pb-20 border-t border-zinc-200/80 relative z-30 overflow-hidden">
 
-        <!-- SECTION HEADER -->
         <div class="max-w-6xl mx-auto px-8 md:px-16 mb-12">
             <div class="flex items-center gap-2 text-xs font-mono-code text-cyan-700 font-semibold uppercase tracking-widest">
                 <span class="w-2 h-2 rounded-full bg-cyan-500"></span> 03 / Expertise &amp; Toolkit
@@ -512,13 +533,12 @@
             </p>
         </div>
 
-        <!-- PART 1: SLIDING TOOLS MARQUEE (PERMANENTLY IN COLOR) -->
+        <!-- PART 1: SLIDING TOOLS MARQUEE -->
         <div class="mb-20">
             <h3 class="max-w-6xl mx-auto px-8 md:px-16 text-xs font-mono-code uppercase tracking-wider text-zinc-400 font-semibold mb-6">
                 // Tools &amp; Platforms I Leverage
             </h3>
 
-            <!-- INFINITE RIGHT-TO-LEFT SCROLLER WRAPPER -->
             <div class="relative w-full overflow-hidden flex items-center py-4 mask-fade">
                 <style>
                     @keyframes scrollLeft {
@@ -547,42 +567,6 @@
                 </style>
 
                 <div class="animate-marquee flex gap-12 px-6 items-center">
-
-                    <!-- SET 1 (Always in Color) -->
-                    <div class="flex gap-12 shrink-0 items-center">
-                        <!-- VS Code -->
-                        <div class="flex items-center gap-3 transition-transform hover:scale-105 cursor-pointer">
-                            <img src="vscode.png" alt="VS Code" class="w-7 h-7 object-contain" />
-                            <span class="serif-title text-lg font-bold text-zinc-800 tracking-wide">VS Code</span>
-                        </div>
-                        <!-- GitHub -->
-                        <div class="flex items-center gap-3 transition-transform hover:scale-105 cursor-pointer">
-                            <img src="github.png" alt="GitHub" class="w-7 h-7 object-contain" />
-                            <span class="serif-title text-lg font-bold text-zinc-800 tracking-wide">GitHub</span>
-                        </div>
-                        <!-- Figma -->
-                        <div class="flex items-center gap-3 transition-transform hover:scale-105 cursor-pointer">
-                            <img src="figma.png" alt="Figma" class="w-7 h-7 object-contain" />
-                            <span class="serif-title text-lg font-bold text-zinc-800 tracking-wide">Figma</span>
-                        </div>
-                        <!-- AWS -->
-                        <div class="flex items-center gap-3 transition-transform hover:scale-105 cursor-pointer">
-                            <img src="aws.png" alt="AWS" class="w-7 h-7 object-contain" />
-                            <span class="serif-title text-lg font-bold text-zinc-800 tracking-wide">AWS &amp; Cloud</span>
-                        </div>
-                        <!-- MongoDB Compass -->
-                        <div class="flex items-center gap-3 transition-transform hover:scale-105 cursor-pointer">
-                            <img src="mongodb.png" alt="MongoDB" class="w-7 h-7 object-contain" />
-                            <span class="serif-title text-lg font-bold text-zinc-800 tracking-wide">MongoDB Compass</span>
-                        </div>
-                        <!-- SolidWorks -->
-                        <div class="flex items-center gap-3 transition-transform hover:scale-105 cursor-pointer">
-                            <img src="solidworks.png" alt="SolidWorks" class="w-7 h-7 object-contain" />
-                            <span class="serif-title text-lg font-bold text-zinc-800 tracking-wide">SolidWorks &amp; AutoCAD</span>
-                        </div>
-                    </div>
-
-                    <!-- SET 2 (Duplicate for smooth infinite looping) -->
                     <div class="flex gap-12 shrink-0 items-center">
                         <div class="flex items-center gap-3 transition-transform hover:scale-105 cursor-pointer">
                             <img src="vscode.png" alt="VS Code" class="w-7 h-7 object-contain" />
@@ -610,100 +594,99 @@
                         </div>
                     </div>
 
+                    <div class="flex gap-12 shrink-0 items-center">
+                        <div class="flex items-center gap-3 transition-transform hover:scale-105 cursor-pointer">
+                            <img src="vscode.png" alt="VS Code" class="w-7 h-7 object-contain" />
+                            <span class="serif-title text-lg font-bold text-zinc-800 tracking-wide">VS Code</span>
+                        </div>
+                        <div class="flex items-center gap-3 transition-transform hover:scale-105 cursor-pointer">
+                            <img src="github.png" alt="GitHub" class="w-7 h-7 object-contain" />
+                            <span class="serif-title text-lg font-bold text-zinc-800 tracking-wide">GitHub</span>
+                        </div>
+                        <div class="flex items-center gap-3 transition-transform hover:scale-105 cursor-pointer">
+                            <img src="figma.png" alt="Figma" class="w-7 h-7 object-contain" />
+                            <span class="serif-title text-lg font-bold text-zinc-800 tracking-wide">Figma</span>
+                        </div>
+                        <div class="flex items-center gap-3 transition-transform hover:scale-105 cursor-pointer">
+                            <img src="aws.png" alt="AWS" class="w-7 h-7 object-contain" />
+                            <span class="serif-title text-lg font-bold text-zinc-800 tracking-wide">AWS &amp; Cloud</span>
+                        </div>
+                        <div class="flex items-center gap-3 transition-transform hover:scale-105 cursor-pointer">
+                            <img src="mongodb.png" alt="MongoDB" class="w-7 h-7 object-contain" />
+                            <span class="serif-title text-lg font-bold text-zinc-800 tracking-wide">MongoDB Compass</span>
+                        </div>
+                        <div class="flex items-center gap-3 transition-transform hover:scale-105 cursor-pointer">
+                            <img src="solidworks.png" alt="SolidWorks" class="w-7 h-7 object-contain" />
+                            <span class="serif-title text-lg font-bold text-zinc-800 tracking-wide">SolidWorks &amp; AutoCAD</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- PART 2: STATIC CORE SKILLS GRID (GRAYSCALE UNTIL HOVERED) -->
+        <!-- PART 2: STATIC CORE SKILLS GRID -->
         <div class="max-w-6xl mx-auto px-8 md:px-16">
             <h3 class="text-xs font-mono-code uppercase tracking-wider text-zinc-400 font-semibold mb-6">
                 // Core Technical Skills &amp; Competencies
             </h3>
 
             <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-
-                <!-- 1. Data Structures & Algorithms -->
                 <div class="group bg-white/70 backdrop-blur-md border border-zinc-200/80 rounded-2xl p-5 flex flex-col items-center justify-center gap-2 transition-all duration-300 hover:bg-white hover:border-cyan-400 hover:shadow-md cursor-pointer text-center">
                     <span class="text-3xl grayscale opacity-75 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300">📊</span>
                     <span class="text-xs font-semibold text-zinc-500 group-hover:text-zinc-900 transition-colors">Data Structures &amp; Algorithms</span>
                 </div>
-
-                <!-- 2. Robot Operating System (ROS) -->
                 <div class="group bg-white/70 backdrop-blur-md border border-zinc-200/80 rounded-2xl p-5 flex flex-col items-center justify-center gap-2 transition-all duration-300 hover:bg-white hover:border-cyan-400 hover:shadow-md cursor-pointer text-center">
                     <span class="text-3xl grayscale opacity-75 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300">🤖</span>
                     <span class="text-xs font-semibold text-zinc-500 group-hover:text-zinc-900 transition-colors">Robot Operating System (ROS)</span>
                 </div>
-
-                <!-- 3. Artificial Intelligence (AI) -->
                 <div class="group bg-white/70 backdrop-blur-md border border-zinc-200/80 rounded-2xl p-5 flex flex-col items-center justify-center gap-2 transition-all duration-300 hover:bg-white hover:border-cyan-400 hover:shadow-md cursor-pointer text-center">
                     <span class="text-3xl grayscale opacity-75 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300">🧠</span>
                     <span class="text-xs font-semibold text-zinc-500 group-hover:text-zinc-900 transition-colors">Artificial Intelligence (AI)</span>
                 </div>
-
-                <!-- 4. Machine Learning Concepts -->
                 <div class="group bg-white/70 backdrop-blur-md border border-zinc-200/80 rounded-2xl p-5 flex flex-col items-center justify-center gap-2 transition-all duration-300 hover:bg-white hover:border-cyan-400 hover:shadow-md cursor-pointer text-center">
                     <span class="text-3xl grayscale opacity-75 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300">📈</span>
                     <span class="text-xs font-semibold text-zinc-500 group-hover:text-zinc-900 transition-colors">Machine Learning (ML)</span>
                 </div>
-
-                <!-- 5. AWS -->
                 <div class="group bg-white/70 backdrop-blur-md border border-zinc-200/80 rounded-2xl p-5 flex flex-col items-center justify-center gap-2 transition-all duration-300 hover:bg-white hover:border-cyan-400 hover:shadow-md cursor-pointer text-center">
                     <img src="aws.png" alt="AWS" class="w-9 h-9 object-contain grayscale opacity-75 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300" />
                     <span class="text-xs font-semibold text-zinc-500 group-hover:text-zinc-900 transition-colors">AWS (Amazon Web Services)</span>
                 </div>
-
-                <!-- 6. NoSQL & Cassandra -->
                 <div class="group bg-white/70 backdrop-blur-md border border-zinc-200/80 rounded-2xl p-5 flex flex-col items-center justify-center gap-2 transition-all duration-300 hover:bg-white hover:border-cyan-400 hover:shadow-md cursor-pointer text-center">
                     <span class="text-3xl grayscale opacity-75 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300">🗄️</span>
                     <span class="text-xs font-semibold text-zinc-500 group-hover:text-zinc-900 transition-colors">NoSQL &amp; Cassandra</span>
                 </div>
-
-                <!-- 7. PostgreSQL Administration -->
                 <div class="group bg-white/70 backdrop-blur-md border border-zinc-200/80 rounded-2xl p-5 flex flex-col items-center justify-center gap-2 transition-all duration-300 hover:bg-white hover:border-cyan-400 hover:shadow-md cursor-pointer text-center">
                     <span class="text-3xl grayscale opacity-75 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300">🐘</span>
                     <span class="text-xs font-semibold text-zinc-500 group-hover:text-zinc-900 transition-colors">PostgreSQL Administration</span>
                 </div>
-
-                <!-- 8. Business Intelligence (BI) -->
                 <div class="group bg-white/70 backdrop-blur-md border border-zinc-200/80 rounded-2xl p-5 flex flex-col items-center justify-center gap-2 transition-all duration-300 hover:bg-white hover:border-cyan-400 hover:shadow-md cursor-pointer text-center">
                     <span class="text-3xl grayscale opacity-75 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300">📊</span>
                     <span class="text-xs font-semibold text-zinc-500 group-hover:text-zinc-900 transition-colors">Business Intelligence (BI)</span>
                 </div>
-
-                <!-- 9. Data Science Tools -->
                 <div class="group bg-white/70 backdrop-blur-md border border-zinc-200/80 rounded-2xl p-5 flex flex-col items-center justify-center gap-2 transition-all duration-300 hover:bg-white hover:border-cyan-400 hover:shadow-md cursor-pointer text-center">
                     <span class="text-3xl grayscale opacity-75 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300">🧪</span>
                     <span class="text-xs font-semibold text-zinc-500 group-hover:text-zinc-900 transition-colors">Data Science Tools</span>
                 </div>
-
-                <!-- 10. AutoCAD & SolidWorks -->
                 <div class="group bg-white/70 backdrop-blur-md border border-zinc-200/80 rounded-2xl p-5 flex flex-col items-center justify-center gap-2 transition-all duration-300 hover:bg-white hover:border-cyan-400 hover:shadow-md cursor-pointer text-center">
                     <img src="solidworks.png" alt="SolidWorks" class="w-9 h-9 object-contain grayscale opacity-75 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300" />
                     <span class="text-xs font-semibold text-zinc-500 group-hover:text-zinc-900 transition-colors">AutoCAD &amp; SolidWorks</span>
                 </div>
-
-                <!-- 11. Entrepreneurship -->
                 <div class="group bg-white/70 backdrop-blur-md border border-zinc-200/80 rounded-2xl p-5 flex flex-col items-center justify-center gap-2 transition-all duration-300 hover:bg-white hover:border-cyan-400 hover:shadow-md cursor-pointer text-center">
                     <span class="text-3xl grayscale opacity-75 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300">💡</span>
                     <span class="text-xs font-semibold text-zinc-500 group-hover:text-zinc-900 transition-colors">Entrepreneurship</span>
                 </div>
-
-                <!-- 12. Creative Thinking -->
                 <div class="group bg-white/70 backdrop-blur-md border border-zinc-200/80 rounded-2xl p-5 flex flex-col items-center justify-center gap-2 transition-all duration-300 hover:bg-white hover:border-cyan-400 hover:shadow-md cursor-pointer text-center">
                     <span class="text-3xl grayscale opacity-75 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300">💭</span>
                     <span class="text-xs font-semibold text-zinc-500 group-hover:text-zinc-900 transition-colors">Creative Thinking</span>
                 </div>
-
             </div>
         </div>
 
     </section>
 
-    </section>
     <!-- ================= SECTION: ABOUT ME ================= -->
     <section id="about" class="w-full bg-[#f7f6f2] px-8 md:px-16 lg:px-24 pt-8 pb-20 border-t border-zinc-200/80 relative z-30">
 
-        <!-- SECTION HEADER TAG -->
         <div class="max-w-6xl mx-auto mb-10">
             <div class="flex items-center gap-2 text-xs font-mono-code text-cyan-700 font-semibold uppercase tracking-widest">
                 <span class="w-2 h-2 rounded-full bg-cyan-500"></span> 04 / Background &amp; Philosophy
@@ -711,21 +694,15 @@
             <h2 class="serif-title text-3xl md:text-5xl text-zinc-900 mt-2">About Me</h2>
         </div>
 
-        <!-- 2-COLUMN LAYOUT -->
         <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
 
-            <!-- LEFT SIDE: HOMEPAGE STYLE PORTRAIT, NAME & QUOTE (5 COLS) -->
             <div class="md:col-span-5 flex flex-col items-start gap-3.5 max-w-[10cm]">
-                <!-- Exact Home Dashboard Portrait Size & Style -->
                 <div class="w-[10cm] h-[10cm] max-w-[80vw] max-h-[40vh] rounded-2xl overflow-hidden shrink-0 shadow-sm border border-zinc-200">
                     <img src="jeet.png" onerror="this.onerror=null; this.src='portrait.jpg';" alt="Jeet Arjune" class="w-full h-full object-cover object-top block" />
                 </div>
 
                 <div class="flex flex-col items-start gap-2 w-full mt-2">
-                    <!-- Name -->
                     <h3 class="serif-title text-2xl sm:text-3xl font-normal text-zinc-900 m-0">Jeet Arjune</h3>
-
-                    <!-- Quote Underneath -->
                     <h3 class="serif-title text-xl sm:text-[22px] font-normal leading-[1.2] tracking-tight text-zinc-800 max-w-[10cm] mb-1">
                         Our attention is our currency. Spend wisely.
                     </h3>
@@ -733,24 +710,20 @@
                 </div>
             </div>
 
-            <!-- RIGHT SIDE: PROFESSIONAL DESCRIPTION (7 COLS) -->
             <div class="md:col-span-7 space-y-6 text-zinc-700 text-sm md:text-base leading-relaxed font-light">
                 <p>
-                    I am a dedicated software engineer and systems architect passionate about bridging the gap between rigorous technical logic and real-world utility. My core expertise lies in building scalable full-stack web applications, AI-powered productivity tools,
-                    and automated robotic control workflows.
+                    I am a dedicated software engineer and systems architect passionate about bridging the gap between rigorous technical logic and real-world utility. My core expertise lies in building scalable full-stack web applications, AI-powered productivity tools, and automated robotic control workflows.
                 </p>
                 <p>
                     Whether it is architecting backend REST APIs with Node.js and MongoDB, designing intelligent vision-based optimization systems, or deploying responsive frontend experiences, I focus on clean code, robust security, and seamless user interaction.
                 </p>
                 <p>
-                    Recognized through competitive project expos like <strong class="text-zinc-900 font-semibold">Tech Fusion 2026</strong> and backed by hands-on industrial training in robotics and cloud administration (IBM, Salesforce), I thrive in
-                    environments that challenge me to solve complex architectural problems and build software that genuinely matters.
+                    Recognized through competitive project expos like <strong class="text-zinc-900 font-semibold">Tech Fusion 2026</strong> and backed by hands-on industrial training in robotics and cloud administration (IBM, Salesforce), I thrive in environments that challenge me to solve complex architectural problems and build software that genuinely matters.
                 </p>
 
-                <!-- QUICK STATS / HIGHLIGHTS ROW -->
                 <div class="grid grid-cols-3 gap-4 pt-6 border-t border-zinc-200/80 text-center">
                     <div class="bg-white/60 border border-zinc-200/60 rounded-2xl p-4">
-                        <span class="block font-mono-code text-xl font-bold text-cyan-700">4+</span>
+                        <span class="block font-mono-code text-xl font-bold text-cyan-700">6+</span>
                         <span class="text-[11px] text-zinc-500 uppercase tracking-wider font-medium">Core Projects</span>
                     </div>
                     <div class="bg-white/60 border border-zinc-200/60 rounded-2xl p-4">
@@ -771,8 +744,8 @@
     <div id="certModal" onclick="closeCertModal()" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 opacity-0 pointer-events-none transition-all duration-300">
         <div onclick="event.stopPropagation()" class="bg-white/95 backdrop-blur-xl border border-white/40 max-w-2xl w-full rounded-2xl p-6 shadow-2xl relative transform scale-95 transition-transform duration-300" id="modalBox">
             <button onclick="closeCertModal()" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-zinc-100 hover:bg-zinc-200 text-zinc-700 flex items-center justify-center font-bold text-sm transition-colors">
-        &times;
-      </button>
+                &times;
+            </button>
             <div class="rounded-xl overflow-hidden bg-zinc-100 border border-zinc-200 mb-4 max-h-[60vh] flex items-center justify-center">
                 <img id="modalImg" src="" alt="Expanded Certificate" class="max-h-[60vh] w-auto object-contain" />
             </div>
@@ -784,7 +757,6 @@
     <!-- ================= SECTION: CONTACT ================= -->
     <section id="contact" class="w-full bg-[#f7f6f2] px-8 md:px-16 lg:px-24 pt-8 pb-16 border-t border-zinc-200/80 relative z-30 overflow-hidden">
 
-        <!-- SECTION HEADER -->
         <div class="max-w-6xl mx-auto mb-8">
             <div class="flex items-center gap-2 text-xs font-mono-code text-cyan-700 font-semibold uppercase tracking-widest">
                 <span class="w-2 h-2 rounded-full bg-cyan-500"></span> 05 / Get In Touch
@@ -795,13 +767,10 @@
             </p>
         </div>
 
-        <!-- CONTACT CONTAINER WITH ORGANIC CARD DESIGN -->
         <div class="max-w-6xl mx-auto bg-white/80 backdrop-blur-md border border-zinc-200/80 rounded-3xl p-6 md:p-8 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-8 relative overflow-hidden">
 
-            <!-- LEFT: FORM (7 COLS) -->
           <form action="https://formsubmit.co/arjunejeet@gmail.com" method="POST" class="lg:col-span-7 space-y-4 z-10">
     
-                <!-- FormSubmit Configuration Fields -->
                 <input type="hidden" name="_next" value="https://jeet-arjune.github.io/jeet-TechPortfolio/">
                 <input type="hidden" name="_subject" value="New Portfolio Contact Message from Jeet-TechPortfolio!">
                 <input type="hidden" name="_template" value="table">
@@ -837,21 +806,16 @@
                 </button>
             </form>
 
-            <!-- RIGHT: ORGANIC INFO PANEL (5 COLS) -->
             <div class="lg:col-span-5 bg-gradient-to-br from-cyan-50/90 via-teal-50/80 to-emerald-50/60 border border-cyan-100 rounded-2xl p-6 flex flex-col items-center justify-between text-center relative overflow-hidden z-10 ">
-                <!-- Decorative background soft blob -->
                 <div class="absolute -top-12 -right-12 w-40 h-40 rounded-full bg-cyan-200/40 blur-2xl pointer-events-none "></div>
 
                 <div class="flex flex-col items-center w-full z-10 ">
-                    <!-- Circular Portrait Image -->
                     <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden border-2 border-white shadow-md mb-3 shrink-0 ">
-                        <img src="jeet.png " onerror="this.onerror=null; this.src='portrait.jpg' ; " alt="Jeet Arjune " class="w-full h-full object-cover object-top block " />
+                        <img src="jeet.png" onerror="this.onerror=null; this.src='portrait.jpg';" alt="Jeet Arjune" class="w-full h-full object-cover object-top block " />
                     </div>
 
-                    <!-- Name -->
                     <h3 class="serif-title text-xl font-bold text-zinc-900 mb-4 ">Jeet Arjune</h3>
 
-                    <!-- Center-Aligned Contact Details -->
                     <div class="space-y-3 text-xs text-zinc-700 font-medium w-full ">
                         <div class="flex items-center justify-center gap-2.5 ">
                             <span class="text-cyan-700 text-sm ">📍</span>
@@ -868,59 +832,40 @@
                     </div>
                 </div>
 
-                <!-- OFFICIAL BRAND SOCIAL LOGOS & REDIRECT LINKS -->
                 <div class="flex items-center justify-center gap-3 pt-6 mt-6 border-t border-cyan-200/60 w-full z-10 ">
-
-                    <!-- GitHub Official SVG Logo -->
-                    <a href="https://github.com/jeet-arjune " target="_blank " rel="noopener noreferrer " title="GitHub Profile " class="w-9 h-9 rounded-full bg-white/90 shadow-xs border border-cyan-200 flex items-center justify-center text-zinc-800
-                        hover:text-cyan-700 hover:scale-110 transition-all ">
+                    <a href="https://github.com/jeet-arjune " target="_blank " rel="noopener noreferrer " title="GitHub Profile " class="w-9 h-9 rounded-full bg-white/90 shadow-xs border border-cyan-200 flex items-center justify-center text-zinc-800 hover:text-cyan-700 hover:scale-110 transition-all ">
                         <svg class="w-4 h-4 fill-current " viewBox="0 0 24 24 ">
-                            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87
-                        1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23
-                        3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z "/>
+                            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z "/>
                         </svg>
                     </a>
-
-                    <!-- LinkedIn Official SVG Logo -->
-                    <a href="https://www.linkedin.com/in/jeet-arjune-b34378312/ " target="_blank " rel="noopener noreferrer " title="LinkedIn Profile " class="w-9 h-9 rounded-full bg-white/90 shadow-xs border border-cyan-200 flex items-center justify-center
-                        text-[#0a66c2] hover:scale-110 transition-all ">
+                    <a href="https://www.linkedin.com/in/jeet-arjune-b34378312/ " target="_blank " rel="noopener noreferrer " title="LinkedIn Profile " class="w-9 h-9 rounded-full bg-white/90 shadow-xs border border-cyan-200 flex items-center justify-center text-[#0a66c2] hover:scale-110 transition-all ">
                         <svg class="w-4 h-4 fill-current " viewBox="0 0 24 24 ">
-                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75
-                        1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z "/>
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z "/>
                         </svg>
                     </a>
-
-                    <!-- WhatsApp Official SVG Logo -->
-                    <a href="https://wa.me/918999098530 " target="_blank " rel="noopener noreferrer " title="Chat on WhatsApp " class="w-9 h-9 rounded-full bg-white/90 shadow-xs border border-cyan-200 flex items-center justify-center text-[#25d366]
-                        hover:scale-110 transition-all ">
+                    <a href="https://wa.me/918999098530 " target="_blank " rel="noopener noreferrer " title="Chat on WhatsApp " class="w-9 h-9 rounded-full bg-white/90 shadow-xs border border-cyan-200 flex items-center justify-center text-[#25d366] hover:scale-110 transition-all ">
                         <svg class="w-4 h-4 fill-current " viewBox="0 0 24 24 ">
-                            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305
-                        1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941
-                        1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198
-                        0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z "/>
+                            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z "/>
                         </svg>
                     </a>
-
                 </div>
             </div>
 
         </div>
-        <!-- FOOTER -->
+
         <div class="max-w-6xl mx-auto mt-8 pt-4 border-t border-zinc-200/80 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500 font-mono-code ">
             <p>&copy; 2026 Jeet Arjune. Designed for Professional &amp; Tech Deployment.</p>
             <p class="mt-1 sm:mt-0 ">Hosted on GitHub Pages</p>
         </div>
     </section>
 
-  <!-- AUTO-SCROLL & REFRESH CONTROLLER SCRIPT -->
+    <!-- AUTO-SCROLL & REFRESH CONTROLLER SCRIPT -->
     <script>
-        // Force scroll to top on page refresh or reload
         if (history.scrollRestoration) {
             history.scrollRestoration = 'manual';
         }
         window.scrollTo(0, 0);
 
-        // Project Carousel Auto Scroll - Safari Universal Fix
         const projectContainer = document.getElementById('projectScrollContainer');
         let isPaused = false;
         let scrollPos = 0;
@@ -928,7 +873,6 @@
         let direction = 1;
 
         if (projectContainer) {
-            // Pause on hover or touch
             projectContainer.addEventListener('mouseenter', () => { isPaused = true; });
             projectContainer.addEventListener('mouseleave', () => { isPaused = false; });
             projectContainer.addEventListener('touchstart', () => { isPaused = true; }, { passive: true });
@@ -943,7 +887,6 @@
                     if (maxScroll > 0) {
                         scrollPos += scrollSpeed * direction;
                         
-                        // Reverse direction at top or bottom
                         if (scrollPos >= maxScroll) {
                             scrollPos = maxScroll;
                             direction = -1;
@@ -955,18 +898,15 @@
                         projectContainer.scrollTop = scrollPos;
                     }
                 } else {
-                    // Sync our internal tracking if user manually scrolls
                     scrollPos = projectContainer.scrollTop;
                 }
                 requestAnimationFrame(stepScroll);
             }
 
-            // Initialize position and start loop
             scrollPos = projectContainer.scrollTop;
             requestAnimationFrame(stepScroll);
         }
 
-        // Modal Handlers
         const certModal = document.getElementById('certModal');
         const modalBox = document.getElementById('modalBox');
         const modalImg = document.getElementById('modalImg');
@@ -988,7 +928,6 @@
             modalBox.classList.add('scale-95');
         }
     </script>
-    
 </body>
 
 </html>
